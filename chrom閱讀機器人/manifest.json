@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "網頁文字朗讀器",
+  "version": "1.0",
+  "description": "朗讀網頁上選中的文字",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+} 

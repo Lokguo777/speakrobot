@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h2>網頁文字朗讀器</h2>
+  <select id="voiceSelect">
+    <option value="">選擇語音</option>
+  </select>
+  <button id="startReading">開始朗讀</button>
+  <button id="stopReading">停止朗讀</button>
+  <script src="popup.js"></script>
+</body>
+</html> 
